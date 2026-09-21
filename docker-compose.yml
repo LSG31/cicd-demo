@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    image: cicd-demo:local
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: development
+      APP_VERSION: local
+      LOG_LEVEL: INFO
+    restart: unless-stopped
